@@ -1,4 +1,4 @@
-data = [x.strip() for x in open('day4.txt', 'r').readlines()]
+data = [x.strip() for x in open('day41.txt', 'r').readlines()]
 
 total = 0 
 
@@ -17,8 +17,9 @@ for line in data:
     elf2_start, elf2_end = elf2.split('-')   
     if set.intersection(set(range(int(elf1_start), int(elf1_end) + 1, 1)), set(range(int(elf2_start), int(elf2_end) + 1, 1))):
         total += 1
-    else:
         print(elf1, elf2)
+    # else:
+    #     print(elf1, elf2)
 
 
 print(total)
